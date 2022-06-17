@@ -386,7 +386,7 @@ download_files(){
         shadowsocks_libev_file="shadowsocks-libev-$(echo "${libev_ver}" | sed -e 's/^[a-zA-Z]//g')"
         shadowsocks_libev_url="https://objects.githubusercontent.com/github-production-release-asset-2e65be/7177269/cb5b1b00-f73e-11ea-996d-9c2e5ce71448?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20220617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220617T054614Z&X-Amz-Expires=300&X-Amz-Signature=54dc47b4a73c2f663a33634fc9a2b7c0737bcca7e478aa8e66ab96dfc9c25907&X-Amz-SignedHeaders=host&actor_id=10006366&key_id=0&repo_id=7177269&response-content-disposition=attachment%3B%20filename%3Dshadowsocks-libev-3.3.5.tar.gz&response-content-type=application%2Foctet-stream"
 
-        download "${shadowsocks_libev_file}.tar.gz" "${shadowsocks_libev_url}"
+        download "${shadowsocks-libev-3.3.5}.tar.gz" "${shadowsocks_libev_url}"
         if check_sys packageManager yum; then
             download "${shadowsocks_libev_init}" "${shadowsocks_libev_centos}"
         elif check_sys packageManager apt; then
